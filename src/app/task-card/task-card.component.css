@@ -1,0 +1,40 @@
+.task-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  margin-bottom: 10px;
+  width: auto;
+  max-width: 700px;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: #c1b2b2 0px 1px 6px 0px;
+}
+
+.task-container h1 {
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.task-container button {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border: none;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.delete-button {
+  background-color: tomato !important;
+  color: white !important;
+  border: none !important;
+}
+
+.task-container button:active {
+  border-color: rgb(76, 214, 88);
+  color: rgb(76, 214, 88);
+}
