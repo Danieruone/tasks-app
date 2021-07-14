@@ -5,6 +5,6 @@
         <button (click)="sumarTarea($event)">Crear Tarea</button>
     </form>
     <div class="task-list" >
-        <app-task-card *ngFor="let tarea of tareas;" [nombre]="tarea"></app-task-card>
+        <app-task-card *ngFor="let tarea of tareas;" [tareas]="tareas" [nombre]="tarea"></app-task-card>
     </div>
 </div>
