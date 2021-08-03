@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {Task} from "../interfaces/task.interface"
 
 @Component({
@@ -8,15 +8,14 @@ import {Task} from "../interfaces/task.interface"
 })
 export class TaskCardComponent {
   @Input() task!:Task 
-  @Input() tasks!:Task[]
   @Input() index!:number 
+  @Output() onDeleteTask:EventEmitter<number> = new EventEmitter();
 
   changeStatus(){
     this.task.status = !this.task.status
   }
 
   deleteTask(){
-    this.tasks = this.tasks.filter((tarea, index) =>  index !== this.index );
-    console.log(this.tasks)
+    this.onDeleteTask.emit(this.index)
   }
 }

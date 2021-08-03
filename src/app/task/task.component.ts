@@ -22,7 +22,12 @@ export class TaskComponent {
         name: this.taskInput,
         status: false
       });
+      this.taskInput = ""
       this.input.nativeElement.value = ""
     }
+  }
+
+  deleteTask(index:number){
+    this.tasks = this.tasks.filter((tarea, idx) =>  idx !== index );
   }
 }

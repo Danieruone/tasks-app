@@ -5,6 +5,6 @@
         <button (click)="addTask($event)">Crear Tarea</button>
     </form>
     <div class="task-list" >
-        <app-task-card *ngFor="let task of tasks; index as i" [index]="i" [tasks]="tasks" [task]="task"></app-task-card>
+        <app-task-card *ngFor="let task of tasks; index as i" [index]="i" [task]="task" (onDeleteTask)="deleteTask($event)"></app-task-card>
     </div>
 </div>
