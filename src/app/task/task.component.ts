@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import {Task} from "../interfaces/task.interface"
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
@@ -7,17 +7,22 @@ import { Component } from '@angular/core';
 })
 export class TaskComponent {
 
-  tareaInput:string = "" 
-  tareas: string[] = []
+  taskInput:string = "";
+  tasks: Task[] = [];
+  @ViewChild("input")input!:ElementRef;
 
   OnInput(event: any) {
-    this.tareaInput = event.target.value;
+    this.taskInput = event.target.value;
   }
 
-  sumarTarea(event:any){
-    event.preventDefault()
-    if(this.tareaInput !== ""){
-      this.tareas.push(this.tareaInput);
+  addTask(event:any){
+    event.preventDefault();
+    if(this.taskInput !== ""){
+      this.tasks.push({
+        name: this.taskInput,
+        status: false
+      });
+      this.input.nativeElement.value = ""
     }
   }
 }

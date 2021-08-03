@@ -32,9 +32,22 @@
   background-color: tomato !important;
   color: white !important;
   border: none !important;
+  cursor: pointer;
 }
 
 .task-container button:active {
   border-color: rgb(76, 214, 88);
   color: rgb(76, 214, 88);
+}
+
+.status-button-true {
+  background-color: #4cd658 !important;
+  color: white !important;
+  cursor: pointer;
+}
+
+.status-button-false {
+  background-color: gray !important;
+  color: white !important;
+  cursor: pointer;
 }

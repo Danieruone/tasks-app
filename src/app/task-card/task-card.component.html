@@ -1,7 +1,8 @@
 <div class="task-container">
-    <h1>{{nombre}}</h1>
+    <h1>{{task.name}}</h1>
     <div>
-        <button>Check</button>
-        <button (click)="eliminarTarea()" class="delete-button">X</button>
+        <button (click)="changeStatus()" *ngIf="task.status" class="status-button-true">Check</button>
+        <button (click)="changeStatus()" *ngIf="!task.status" class="status-button-false">Check</button>
+        <button (click)="deleteTask()" class="delete-button">X</button>
     </div>
 </div>
