@@ -1,10 +1,10 @@
 <div class="container">
     <h1 class="title">Aplicación Tareas</h1>
     <form class="form">
-        <input type="text" placeholder="nombre de tarea..." (keyup)="OnInput($event)"/>
-        <button (click)="sumarTarea($event)">Crear Tarea</button>
+        <input type="text" #input placeholder="nombre de tarea..." (keyup)="OnInput($event)"/>
+        <button (click)="addTask($event)">Crear Tarea</button>
     </form>
     <div class="task-list" >
-        <app-task-card *ngFor="let tarea of tareas;" [tareas]="tareas" [nombre]="tarea"></app-task-card>
+        <app-task-card *ngFor="let task of tasks; index as i" [index]="i" [tasks]="tasks" [task]="task"></app-task-card>
     </div>
 </div>
