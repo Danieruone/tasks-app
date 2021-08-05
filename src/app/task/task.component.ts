@@ -1,10 +1,12 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import {Task} from "../interfaces/task.interface"
+import {Task} from "../interface/task.interface"
+
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
+
 export class TaskComponent {
 
   taskInput:string = "";
