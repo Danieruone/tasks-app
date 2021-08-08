@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TaskComponent } from './task/task.component';
-import { TaskCardComponent } from './task-card/task-card.component';
-import { LoginPageComponent } from './login-page/login-page.component';
+import { TaskComponent } from './pages/task-container/task.component';
+import { TaskCardComponent } from './components/task-card/task-card.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +14,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     TaskCardComponent,
     LoginPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import {Task} from "../interface/task.interface"
+import {Task} from "../../interface/task.interface"
 
 @Component({
   selector: 'app-task-card',

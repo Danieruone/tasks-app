@@ -9,4 +9,5 @@ body {
   background: white;
   color: #3e4144;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
 }
