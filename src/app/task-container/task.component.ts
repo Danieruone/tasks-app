@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import {Task} from "../interface/task.interface"
 
 @Component({
-  selector: 'app-task',
+  selector: 'app-task-container',
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
