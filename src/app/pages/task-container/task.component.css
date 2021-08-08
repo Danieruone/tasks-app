@@ -25,6 +25,7 @@
   border-radius: 10px;
   border: solid 0.1px gray;
   padding: 5px;
+  width: 200px;
 }
 
 .form button {
@@ -34,7 +35,8 @@
   border: none;
   color: white;
   border-radius: 10px;
-  background-color: rgb(76, 214, 88);
+  background-color: #1e1d80;
+  border: solid 1px white;
   cursor: pointer;
 }
 

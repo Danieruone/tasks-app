@@ -1,7 +1,7 @@
 <div class="container">
     <h1 class="title">Tasks App</h1>
     <form class="form">
-        <input type="text" #input placeholder="nombre de tarea..." (keyup)="OnInput($event)"/>
+        <input type="text" #input placeholder="nombre de la tarea" (keyup)="OnInput($event)"/>
         <button (click)="addTask($event)">Crear Tarea</button>
     </form>
     <div class="task-list" >
