@@ -8,7 +8,7 @@
   max-width: 700px;
   padding: 8px;
   border-radius: 8px;
-  box-shadow: #c1b2b2 0px 1px 6px 0px;
+  background-color: white;
 }
 
 .task-container h1 {
@@ -41,13 +41,13 @@
 }
 
 .status-button-true {
-  background-color: #4cd658 !important;
+  background-color: #1e1d80 !important;
   color: white !important;
   cursor: pointer;
 }
 
 .status-button-false {
-  background-color: gray !important;
+  background-color: #939393 !important;
   color: white !important;
   cursor: pointer;
 }

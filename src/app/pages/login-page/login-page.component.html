@@ -1,9 +1,10 @@
 <div class="container">
   <form>
-    <h1>Aplicación de tareas</h1>
+    <img src="../../../assets/task-list.svg"/>
+    <h1>Tasks App</h1>
     <p>Crea tus tareas y lleva un seguimiento de estas</p>
-    <input placeholder="Usuario" type="text" />
-    <input placeholder="Contraseña" type="password" />
-    <button type="submit">Enviar</button>
+    <input placeholder="Usuario" type="text" (keyup)="OnInputEmail($event)"/>
+    <input placeholder="Contraseña" type="password" (keyup)="OnInputPassword($event)"/>
+    <button type="submit" (click)="loginWithData($event)">Enviar</button>
   </form>
 </div>
