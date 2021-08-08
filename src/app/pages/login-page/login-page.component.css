@@ -31,6 +31,7 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid gray;
+  width: 60%;
 }
 
 .container form button {
@@ -41,6 +42,7 @@
   color: white;
   background-color: #4cd658;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .container form button:hover {
