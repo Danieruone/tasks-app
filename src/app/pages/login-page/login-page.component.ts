@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RestService } from 'src/app/rest.service';
-import {Router} from "@angular/router"
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -30,7 +30,10 @@ export class LoginPageComponent {
     };
     this.restService.login(payload).subscribe(
       // to do: save token and user id
-      (data) => this.router.navigate(['/tasks']),
+      (data) => {
+        this.restService.isLogged = true;
+        this.router.navigate(['/tasks']);
+      },
       (error) => {
         Swal.fire('Error', error, 'error');
       }

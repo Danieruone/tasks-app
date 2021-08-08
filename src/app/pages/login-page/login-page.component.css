@@ -51,10 +51,6 @@
   margin-top: 10px;
 }
 
-.container form button:hover {
-  background-color: #3ea547;
-}
-
 @media (max-width: 600px) {
   .container form {
     width: 80%;

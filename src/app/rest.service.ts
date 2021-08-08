@@ -7,6 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class RestService {
+  isLogged = false
   base_url = 'http://localhost:8080/';
 
   constructor(private http: HttpClient) {}
