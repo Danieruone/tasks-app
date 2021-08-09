@@ -1,7 +1,6 @@
 import {
   HttpClient,
   HttpErrorResponse,
-  HttpHeaders,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { throwError } from 'rxjs';
@@ -14,7 +13,7 @@ export class RestService {
   isLogged: boolean = false;
   userID!: string;
   token!: string;
-  base_url: string = 'http://localhost:8080/';
+  base_url: string = 'https://tasks-app-server.herokuapp.com/';
 
   constructor(private http: HttpClient) {}
 
