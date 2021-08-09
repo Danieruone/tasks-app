@@ -1,10 +1,17 @@
 <div class="container">
   <form>
-    <img src="../../../assets/task-list.svg"/>
+    <img src="../../../assets/task-list.svg" />
     <h1>Tasks App</h1>
     <p>Crea tus tareas y lleva un seguimiento de estas</p>
-    <input placeholder="Usuario" type="text" (keyup)="OnInputEmail($event)"/>
-    <input placeholder="Contraseña" type="password" (keyup)="OnInputPassword($event)"/>
-    <button type="submit" (click)="loginWithData($event)">Enviar</button>
+    <input placeholder="Usuario" type="text" (keyup)="OnInputEmail($event)" />
+    <input
+      placeholder="Contraseña"
+      type="password"
+      (keyup)="OnInputPassword($event)"
+    />
+    <button type="submit" (click)="loginWithData($event)">
+      Enviar
+      <div *ngIf="isLoading" class="loader"></div>
+    </button>
   </form>
 </div>
