@@ -30,8 +30,11 @@ export class LoginPageComponent {
     };
     this.restService.login(payload).subscribe(
       // to do: save token and user id
-      (data) => {
+      (data: any) => {
         this.restService.isLogged = true;
+        this.restService.userID = data.user._id;
+        this.restService.token = data.token;
+        console.log('user logged');
         this.router.navigate(['/tasks']);
       },
       (error) => {
