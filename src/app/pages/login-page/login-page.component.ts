@@ -37,7 +37,7 @@ export class LoginPageComponent {
         this.restService.isLogged = true;
         this.restService.userID = data.user._id;
         this.restService.token = data.token;
-        console.log('user logged');
+        this.saveLocalStorage(data);
         this.router.navigate(['/tasks']);
       },
       (error) => {
@@ -45,5 +45,13 @@ export class LoginPageComponent {
         Swal.fire('Error', error, 'error');
       }
     );
+  }
+
+  saveLocalStorage(data: any) {
+    const storage = {
+      userID: data.user._id,
+      token: data.token,
+    };
+    localStorage.setItem('userData', JSON.stringify(storage));
   }
 }
