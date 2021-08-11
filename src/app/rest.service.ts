@@ -1,7 +1,4 @@
-import {
-  HttpClient,
-  HttpErrorResponse,
-} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -15,7 +12,15 @@ export class RestService {
   token!: string;
   base_url: string = 'https://tasks-app-server.herokuapp.com/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    const storage: any = localStorage.getItem('userData');
+    if (storage) {
+      const userData = JSON.parse(storage);
+      this.isLogged = true;
+      this.userID = userData.userID;
+      this.token = userData.token;
+    }
+  }
 
   public login(payload: any) {
     return this.http
