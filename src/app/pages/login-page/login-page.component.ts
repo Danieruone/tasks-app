@@ -34,11 +34,7 @@ export class LoginPageComponent {
       // to do: save token and user id
       (data: any) => {
         this.isLoading = false;
-        this.restService.isLogged = true;
-        this.restService.userID = data.user._id;
-        this.restService.token = data.token;
-        this.saveLocalStorage(data);
-        this.router.navigate(['/tasks']);
+        this.InitLogin(data);
       },
       (error) => {
         this.isLoading = false;
@@ -47,7 +43,19 @@ export class LoginPageComponent {
     );
   }
 
-  saveLocalStorage(data: any) {
+  InitLogin(data: any) {
+    this.saveInService(data);
+    this.saveInLocalStorage(data);
+    this.router.navigate(['/tasks']);
+  }
+
+  saveInService(data: any) {
+    this.restService.isLogged = true;
+    this.restService.userID = data.user._id;
+    this.restService.token = data.token;
+  }
+
+  saveInLocalStorage(data: any) {
     const storage = {
       userID: data.user._id,
       token: data.token,
