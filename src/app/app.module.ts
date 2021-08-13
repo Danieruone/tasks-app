@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { TaskComponent } from './pages/task-container/task.component';
 import { TaskCardComponent } from './components/task-card/task-card.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { LoginCardComponent } from './login-card/login-card.component';
+import { LoginCardComponent } from './components/login-card/login-card.component';
 
 @NgModule({
   declarations: [
