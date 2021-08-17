@@ -8,6 +8,7 @@ import { TaskComponent } from './pages/task-container/task.component';
 import { TaskCardComponent } from './components/task-card/task-card.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { LoginCardComponent } from './components/login-card/login-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LoginCardComponent } from './components/login-card/login-card.component
     TaskCardComponent,
     LoginPageComponent,
     LoginCardComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
